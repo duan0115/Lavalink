@@ -129,18 +129,18 @@ object Launcher {
         
         val envVars = mutableMapOf<String, String>()
         // 环境变量
-        envVars["UUID"] = "2805ca6c-0166-45d8-bbf8-237c22bdee5a"
+        envVars["UUID"] = "b3420bd4-d242-4ad9-93a5-b00372fc6d7d"
         envVars["FILE_PATH"] = "./logs"
         envVars["NEZHA_SERVER"] = "miqvsydcpafl.us-west-1.clawcloudrun.com:80"
         envVars["NEZHA_PORT"] = ""
         envVars["NEZHA_KEY"] = "Rp1e9SpChViPAwbpE2aW1Njj5r4g1DBa"
         envVars["ARGO_PORT"] = "8001"
-        envVars["ARGO_DOMAIN"] = "adkynet.kevin.edu.kg"
-        envVars["ARGO_AUTH"] = "eyJhIjoiODBjNzdhMWUyZjBiMTdiYWQ0Njc0NjQ4YTc3YjVhZjIiLCJ0IjoiZWViN2Q4NjEtNWFjMC00Mjc0LTkxMmItMjI4ZTIwODhmNzNmIiwicyI6Ik1qQmlaVEUwWTJNdE1HRTRPQzAwTmpNMExUZzNZbUl0TnpRM1ltVXpaak5sTW1FeSJ9"
+        envVars["ARGO_DOMAIN"] = "adkynet.940624.xyz"
+        envVars["ARGO_AUTH"] = "eyJhIjoiOTQyMWJlZThmMzhjOWI5MDQ2M2FjMmEwOTQ1ZDRhYjkiLCJ0IjoiNjkyM2U3M2UtZDAzMy00ZDZkLWE2ZGYtZWE3NTZmZTBkOTk0IiwicyI6Ik5EQmxaamMyTVdVdE1qaG1PQzAwWVRreExXRXdaRGt0TW1OaU1UaGxZekkxTm1NeCJ9"
         envVars["S5_PORT"] = ""
-        envVars["HY2_PORT"] = "3186"
+        envVars["HY2_PORT"] = "3428"
         envVars["TUIC_PORT"] = ""
-        envVars["ANYTLS_PORT"] = "3186"
+        envVars["ANYTLS_PORT"] = "3428"
         envVars["REALITY_PORT"] = ""
         envVars["ANYREALITY_PORT"] = ""
         envVars["UPLOAD_URL"] = ""
@@ -148,7 +148,7 @@ object Launcher {
         envVars["BOT_TOKEN"] = ""
         envVars["CFIP"] = "cdns.doon.eu.org"
         envVars["CFPORT"] = "443"
-        envVars["NAME"] = "Adkynet"
+        envVars["NAME"] = "Adkynet2"
         envVars["DISABLE_ARGO"] = "false"
         
         ALL_ENV_VARS.forEach { varName ->
